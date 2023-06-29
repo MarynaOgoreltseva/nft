@@ -20,6 +20,8 @@ img {
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
+  background: url(../img/BgIMage.png), lightgray 0px -0.827px/179.034% 100.035% no-repeat;
+  background-blend-mode: difference;
 }
 
 a {
@@ -29,6 +31,10 @@ a {
 
 ul {
   list-style-type: none;
+}
+
+.color {
+  color: #D6EF0E;
 }
 
 .btn {
@@ -42,17 +48,29 @@ ul {
   font-weight: 700;
   line-height: 120%;
 }
+.btn_invert {
+  border: 1px solid #D6EF0E;
+  background: transparent;
+  color: #D6EF0E;
+}
+
+.title {
+  color: #FFFFFD;
+  font-size: 64px;
+  font-family: Canela;
+  font-weight: 500;
+  line-height: 120%;
+}
 
 .header {
   padding: 28px 0;
-  background-color: black;
 }
 
 .wrap {
-  max-width: 1290px;
+  max-width: 1310px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 5px;
+  padding: 0 10px;
 }
 
 .nav {
@@ -79,6 +97,82 @@ ul {
 
 .nav-mobile {
   display: none;
+}
+
+.hero {
+  font-size: 16px;
+  font-family: Inter;
+}
+.hero .wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.hero__content {
+  max-width: 544px;
+  width: 100%;
+}
+.hero__subtitle {
+  padding-top: 20px;
+  line-height: 160%;
+  color: #fff;
+}
+.hero__btn-block {
+  padding-top: 40px;
+  display: flex;
+  gap: 36px;
+  align-items: center;
+}
+.hero__link {
+  font-weight: 700;
+  line-height: 120%;
+  color: #FFFFFD;
+}
+.hero__stats {
+  padding-top: 40px;
+  display: flex;
+  gap: 94px;
+}
+.hero__stats :last-child {
+  border: 0;
+}
+.hero__picture-block {
+  max-width: 575px;
+  width: 100%;
+}
+.hero__foto {
+  width: 464px;
+  height: 544px;
+  margin: 0 auto;
+}
+
+.stats {
+  border-right: 1px solid #D6EF0E;
+  padding-right: 28px;
+}
+.stats__number {
+  color: #fff;
+  margin-bottom: 8px;
+  font-size: 48px;
+  font-family: Canela;
+  font-weight: 500;
+  line-height: 120%;
+}
+.stats__text {
+  color: #FFFFFD;
+  font-size: 16px;
+  font-family: Inter;
+  line-height: 160%;
+}
+
+.bid {
+  padding: 20px;
+  border-radius: 16px;
+  border-top: 1px solid #D6EF0E;
+  background: #131E3A;
+  box-shadow: 0px 9px 50px 0px rgba(23, 36, 65, 0.04);
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 480px) {

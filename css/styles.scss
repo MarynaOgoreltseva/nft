@@ -1,3 +1,9 @@
+@font-face {
+    font-weight: 700;
+    font-family: "Source Sans Pro";
+    src: url("../fonts/SourceSansPro/SourceSansPro-Bold.otf");
+}
+
 @import "var.scss";
 *,
 *::after,
@@ -33,7 +39,7 @@ a {
 ul {
     list-style-type: none;
 }
-.color {
+.coloring {
     color: $main-yellow
 }
 
@@ -56,10 +62,15 @@ ul {
 
 .title {
     color: #FFFFFD;
-    font-size: 64px;
     font-family: Canela;
     font-weight: 500;
     line-height: 120%;
+    &_big {
+        font-size: 64px;
+    }
+    &_medium {
+        font-size: 48px;
+    }
 }
 
 .header {
@@ -73,7 +84,9 @@ ul {
     padding: 0 10px;
 }
 
-
+section {
+    padding: 92px 0;
+}
 
 .nav {
     display: flex;
@@ -131,7 +144,7 @@ ul {
         color: $white-stich;
     }
     &__stats {
-        padding-top: 40px;
+        padding-top: 72px;
         display: flex;
         gap: 94px;
         & :last-child {
@@ -146,6 +159,19 @@ ul {
         width: 464px;
         height: 544px;
         margin: 0 auto;
+        position: relative;
+    }
+    &__circle {
+        position: absolute;
+        top: 40%;
+        width: 172px;
+        height: 172px;
+    }
+    &__circle-text {
+        fill: white;
+        font-weight: 700;
+        font-family: "Source Sans Pro";
+        font-size: 16px;
     }
 }
 
@@ -176,7 +202,75 @@ ul {
     box-shadow: 0px 9px 50px 0px rgba(23, 36, 65, 0.04);
     display: flex;
     flex-direction: column;
+    gap: 24px;
+    max-width: 304px;
+    width: 100%;
+    position: absolute;
+    bottom: 100px;
+    right: 125px;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item-text {
+        color: $main-yellow;
+    }
+    &__item-number {
+        color: #FFFFFD;
+    }
 }
+
+.amazing {
+    &__title-line {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: end;
+        margin-bottom: 64px;
+        & .title {
+            max-width: 506px;
+            width: 100%;
+        }
+        & .btn {
+            line-height: 30px;
+        }
+    }
+    &__cards {
+        display: flex;
+    }
+}
+
+.card {
+    width: 410px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 20px;
+    border-radius: 28px;
+    border-top: 1px solid #D6EF0E;
+    background: $background-4;
+    font-family: Inter;
+    font-weight: 700;
+    line-height: 120%;
+    color: $white-stich;
+    &__naming {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__name {
+        font-size: 24px;
+    }
+    &__price {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+    &__number {
+        font-size: 16px;
+    }
+}
+
+
 
 
 @media screen and (max-width:480px) {

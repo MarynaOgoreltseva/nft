@@ -4,6 +4,12 @@
     src: url("../fonts/SourceSansPro/SourceSansPro-Bold.otf");
 }
 
+@font-face {
+    font-weight: 700;
+    font-family: "Canela";
+    src: url("../fonts/CanelaFamily/Canela-Medium-Trial.otf");
+}
+
 @import "var.scss";
 *,
 *::after,
@@ -27,8 +33,9 @@ img {
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
-    background: url(../img/BgIMage.png), lightgray 0px -0.827px / 179.034% 100.035% no-repeat;
-    background-blend-mode: difference;
+    background: url(../img/BgIMage.png);
+        // lightgray 0px -0.827px / 179.034% 100.035% no-repeat;
+    // background-blend-mode: difference;
 }
 
 a {
@@ -44,7 +51,9 @@ ul {
 }
 
 .btn {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 12px 40px;
     border-radius: 8px;
     background: $main-yellow;
@@ -57,6 +66,21 @@ ul {
         border: 1px solid $main-yellow;
         background: transparent;
         color: $main-yellow;
+    }
+    &_header {
+        height: 48px;
+    }
+    &_hero-content {
+        height: 52px;
+    }
+    &_amazing {
+        height: 54px;
+    }
+    &_bit {
+        height: 52px;
+    }
+    &_card {
+        height: 48px;
     }
 }
 
@@ -123,6 +147,7 @@ section {
         flex-wrap: wrap;
     }
     &__content {
+        padding: 26px 0;
         max-width: 544px;
         width: 100%;
     }
@@ -154,16 +179,16 @@ section {
     &__picture-block {
         max-width: 575px;
         width: 100%;
+        position: relative;
     }
     &__foto {
         width: 464px;
         height: 544px;
-        margin: 0 auto;
-        position: relative;
+        margin: 0 51px 0 60px;
     }
     &__circle {
         position: absolute;
-        top: 40%;
+        top: 30%;
         width: 172px;
         height: 172px;
     }
@@ -173,7 +198,13 @@ section {
         font-family: "Source Sans Pro";
         font-size: 16px;
     }
+    &__circle-icon {
+        position: absolute;
+        top: 40%;
+        left: 40%;
+    }
 }
+
 
 .stats {
     border-right: 1px solid $main-yellow;
@@ -206,8 +237,8 @@ section {
     max-width: 304px;
     width: 100%;
     position: absolute;
-    bottom: 100px;
-    right: 125px;
+    bottom: 0;
+    right: 0;
     &__content {
         display: flex;
         justify-content: space-between;
@@ -231,12 +262,10 @@ section {
             max-width: 506px;
             width: 100%;
         }
-        & .btn {
-            line-height: 30px;
-        }
     }
     &__cards {
         display: flex;
+        justify-content: space-between;
     }
 }
 
@@ -256,6 +285,7 @@ section {
     &__naming {
         display: flex;
         justify-content: space-between;
+        margin-bottom: 16px;
     }
     &__name {
         font-size: 24px;
@@ -267,6 +297,16 @@ section {
     }
     &__number {
         font-size: 16px;
+    }
+    &__desc {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__watch {
+        margin-top: 4px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 

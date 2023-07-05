@@ -362,6 +362,69 @@ section {
         width: 100%;
     }
 }
+.grid {
+    display: grid;
+    gap: 30px;
+    // grid-template-rows: 1fr 1fr 1fr;
+    // grid-template-columns: 300px 520px 410px;
+    grid-template-areas: 
+    "grid__cell_1 grid__cell_2 grid__cell_3"
+    "grid__cell_4 grid__cell_5 grid__cell_3";
+    &__cell {
+        display: flex;
+        align-items: end;
+        padding: 0 0 24px 24px;
+        border: 1px solid red;
+        border-radius: 16px;
+        background: linear-gradient(2deg, rgba(19, 30, 58, 0.92) 0%, rgba(19, 30, 58, 0.00) 94.62%),  lightgray -22.387px -35px / 110.921% 105.368% no-repeat;
+        background-blend-mode: darken;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 311px;
+        width: 410px;
+        &_1 {
+            background-image: url(../img/grid2.png);
+            grid-area: grid__cell_1;
+            width: 300px;
+        }
+        &_2 {
+            background-image: url(../img/grid3.png);
+            grid-area: grid__cell_2;
+            width: 520px;
+        }
+        &_3 {
+            background-image: url(../img/grid1.png);
+            grid-area: grid__cell_3;
+            height: 652px;
+        }
+        &_4 {
+            background-image: url(../img/grid4.png);
+            grid-area: grid__cell_4;
+        }
+        &_5 {
+            background-image: url(../img/grid5.png);
+            grid-area: grid__cell_5;
+        }
+    }
+}
+
+.user {
+    display: flex;
+    font-family: Inter;
+    font-style: normal;
+    color: $white-stich;
+    gap: 12px;
+    &__stat {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 160%;
+    }
+    &__name {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 120%;
+    }
+}
 
 @media screen and (max-width:480px) {
     .nav__list {

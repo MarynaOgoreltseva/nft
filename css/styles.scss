@@ -191,6 +191,7 @@ section {
     &__stats {
         padding-top: 72px;
         display: flex;
+        flex-wrap: wrap;
         gap: 94px;
         & :last-child {
             border: 0;
@@ -423,6 +424,53 @@ section {
         font-size: 16px;
         font-weight: 700;
         line-height: 120%;
+    }
+}
+
+.subscribe {
+    & .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title-wrap {
+        max-width: 520px;
+        width: 100%;
+    }
+    &__pictures {
+        position: relative;
+        width: 630px;
+        height: 458px;
+    }
+    &__pic1 {
+        position: absolute;        
+        top: 20px;
+        left: 20px;
+        width: 410px;
+        height: 376px;
+        transform: rotate(-11.188deg);
+    }
+    &__pic2 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 2;
+        width: 282px;
+        height: 348px;
+    }
+}
+
+.email-form {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    background: $background-4;
+    & input {
+        padding: 16px 24px;
+        background-color: transparent;
+        width: calc(100% - 160px);
+        color: $white-dissable-1;
     }
 }
 

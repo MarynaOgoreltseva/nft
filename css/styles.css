@@ -185,6 +185,7 @@ section {
 .hero__stats {
   padding-top: 72px;
   display: flex;
+  flex-wrap: wrap;
   gap: 94px;
 }
 .hero__stats :last-child {
@@ -408,6 +409,51 @@ section {
   font-size: 16px;
   font-weight: 700;
   line-height: 120%;
+}
+
+.subscribe .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.subscribe__title-wrap {
+  max-width: 520px;
+  width: 100%;
+}
+.subscribe__pictures {
+  position: relative;
+  width: 630px;
+  height: 458px;
+}
+.subscribe__pic1 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 410px;
+  height: 376px;
+  transform: rotate(-11.188deg);
+}
+.subscribe__pic2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  width: 282px;
+  height: 348px;
+}
+
+.email-form {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  background: #131E3A;
+}
+.email-form input {
+  padding: 16px 24px;
+  background-color: transparent;
+  width: calc(100% - 160px);
+  color: rgba(255, 255, 253, 0.72);
 }
 
 @media screen and (max-width: 480px) {

@@ -192,7 +192,7 @@ section {
         padding-top: 72px;
         display: flex;
         flex-wrap: wrap;
-        gap: 94px;
+        gap: 90px;
         & :last-child {
             border: 0;
         }
@@ -383,6 +383,8 @@ section {
         background-size: cover;
         height: 311px;
         width: 410px;
+        object-fit: cover;
+        width: 100%;
         &_1 {
             background-image: url(../img/grid2.png);
             grid-area: grid__cell_1;
@@ -471,6 +473,93 @@ section {
         background-color: transparent;
         width: calc(100% - 160px);
         color: $white-dissable-1;
+    }
+}
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.footer {
+    padding: 92px 0;
+    color: $white-stich;
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1253px;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 48px;
+        border-bottom: 1px solid $white-dissable;
+    }
+    &__desc {
+        max-width: 272px;
+        width: 100%;
+    }
+    &__text {
+        margin-bottom: 24px;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+    }
+}
+
+.social {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-list {
+    display: flex;
+    gap: 94px;
+    &__items-title {
+        margin-bottom: 24px;
+        color: $main-white;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+    }
+    &__items {
+        gap: 8px;
+    }
+    &__item-link {
+        color: $white-stich;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        text-decoration: underline;
+    }
+
+}
+
+.copyright {
+    margin-top: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: $white-stich;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    &__list {
+        display: flex;
+        gap: 28px;
+    }
+    &__link {
+        color: $white-stich;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
     }
 }
 

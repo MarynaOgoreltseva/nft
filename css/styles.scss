@@ -184,7 +184,7 @@ section {
     &__content {
         display: flex;
         flex-direction: column;
-        padding: 26px 0;
+        padding: 25px 0;
         max-width: 544px;
         width: 100%;
     }
@@ -304,6 +304,7 @@ section {
     }
     &__name {
         font-size: 24px;
+        line-height: 120%;
     }
     &__price {
         display: flex;
@@ -317,8 +318,17 @@ section {
         display: flex;
         justify-content: space-between;
     }
+    &__lang {
+        color: #838382;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+    }
     &__watch {
         margin-top: 4px;
+        gap: 12px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -362,12 +372,16 @@ section {
         max-width: 307px;
         width: 100%;
     }
+    & .title-line {
+        padding: 0 31px;
+        align-items: center;
+    }
 }
 .grid {
     display: grid;
     gap: 30px;
-    // grid-template-rows: 1fr 1fr 1fr;
-    // grid-template-columns: 300px 520px 410px;
+    // grid-template-columns: repeat(410px, 1fr);
+    grid-auto-flow: dense; 
     grid-template-areas: 
     "grid__cell_1 grid__cell_2 grid__cell_3"
     "grid__cell_4 grid__cell_5 grid__cell_3";
@@ -375,38 +389,43 @@ section {
         display: flex;
         align-items: end;
         padding: 0 0 24px 24px;
-        border: 1px solid red;
         border-radius: 16px;
         background: linear-gradient(2deg, rgba(19, 30, 58, 0.92) 0%, rgba(19, 30, 58, 0.00) 94.62%),  lightgray -22.387px -35px / 110.921% 105.368% no-repeat;
         background-blend-mode: darken;
         background-repeat: no-repeat;
         background-size: cover;
         height: 311px;
-        width: 410px;
+        // max-width: 410px;
         object-fit: cover;
-        width: 100%;
+        // width: 100%;
         &_1 {
             background-image: url(../img/grid2.png);
             grid-area: grid__cell_1;
-            width: 300px;
+            max-width: 300px;
+            width: 100%;
         }
         &_2 {
             background-image: url(../img/grid3.png);
             grid-area: grid__cell_2;
-            width: 520px;
+            // max-width: 520px;
+            // width: 520px;
+            margin-left: calc(100vw / 39 * -1);
         }
         &_3 {
             background-image: url(../img/grid1.png);
             grid-area: grid__cell_3;
             height: 652px;
+            // width: 410px;
         }
         &_4 {
             background-image: url(../img/grid4.png);
             grid-area: grid__cell_4;
+            // width: 410px;
         }
         &_5 {
             background-image: url(../img/grid5.png);
             grid-area: grid__cell_5;
+            // width: 410px;
         }
     }
 }
@@ -468,6 +487,8 @@ section {
     flex-wrap: wrap;
     border-radius: 8px;
     background: $background-4;
+    padding: 4px 4px 4px 0;
+    margin-right: 4px;
     & input {
         padding: 16px 24px;
         background-color: transparent;
@@ -486,6 +507,7 @@ section {
     &__block {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         max-width: 1253px;
         width: 100%;
         margin: 0 auto;
@@ -513,6 +535,7 @@ section {
 
 .footer-list {
     display: flex;
+    flex-wrap: wrap;
     gap: 94px;
     &__items-title {
         margin-bottom: 24px;
@@ -533,7 +556,9 @@ section {
         font-style: normal;
         font-weight: 400;
         line-height: 160%;
-        text-decoration: underline;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
 }

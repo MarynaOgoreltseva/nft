@@ -378,7 +378,7 @@ section {
         bottom: 0;
         left: 0;
         z-index: 2;
-        width: 410px;
+        // width: 410px;
         height: 400px;
     }
 }
@@ -483,7 +483,7 @@ section {
         position: absolute;        
         top: 20px;
         left: 20px;
-        width: 410px;
+        // width: 410px;
         height: 376px;
         // transform: rotate(-11.188deg);
         transform: scale(1.1);
@@ -646,13 +646,22 @@ section {
             display: none;
             &.is-active {
                 display: block;
-                background-color: grey;
+                background-color: $background-4;
                 position: fixed;
                 z-index: 999;
-                width: 100%;
+                width: 100vw;
                 top: 0;
                 left: 0;
                 height: 100vh;
+                padding: 20px;
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                    font-size: 30px;
+                    padding: 20px;
+                    display: block;
+                    text-align: center;
+                }
             }
         }
     }
@@ -683,5 +692,23 @@ section {
     }
     .title-block__btn-line {
         justify-content: center;
+    }
+
+    .subscribe {
+        &__pic1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 376px;
+            transform: scale(0.9);
+        }
+        &__pic2 {
+            transform: scale(0.7);
+        }
+    }
+    .create__pic1 {
+        top: 0;
+        right: 0;
+        height: 475px;
     }
 }

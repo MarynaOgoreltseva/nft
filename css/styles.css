@@ -367,7 +367,6 @@ section {
   bottom: 0;
   left: 0;
   z-index: 2;
-  width: 410px;
   height: 400px;
 }
 
@@ -461,7 +460,6 @@ section {
   position: absolute;
   top: 20px;
   left: 20px;
-  width: 410px;
   height: 376px;
   transform: scale(1.1);
 }
@@ -619,13 +617,22 @@ section {
   }
   .nav-mobile__list.is-active {
     display: block;
-    background-color: grey;
+    background-color: #131E3A;
     position: fixed;
     z-index: 999;
-    width: 100%;
+    width: 100vw;
     top: 0;
     left: 0;
     height: 100vh;
+    padding: 20px;
+  }
+  .nav-mobile__list.is-active a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    padding: 20px;
+    display: block;
+    text-align: center;
   }
   .hero__stats {
     gap: 40px;
@@ -651,5 +658,20 @@ section {
   }
   .title-block__btn-line {
     justify-content: center;
+  }
+  .subscribe__pic1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 376px;
+    transform: scale(0.9);
+  }
+  .subscribe__pic2 {
+    transform: scale(0.7);
+  }
+  .create__pic1 {
+    top: 0;
+    right: 0;
+    height: 475px;
   }
 }/*# sourceMappingURL=styles.css.map */

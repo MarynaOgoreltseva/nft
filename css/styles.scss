@@ -629,6 +629,14 @@ section {
     }
 }
 @media screen and (max-width:480px) {
+    section,
+    .hero,
+    .footer {
+        padding: 30px 0;
+    }
+    section {
+        text-align: center;
+    }
     .nav__list {
         display: none;
     }
@@ -648,5 +656,32 @@ section {
             }
         }
     }
+    .hero {
+        &__stats {
+            gap: 40px;
+            justify-content: center;
+            padding-top: 30px;
+        }
+        &__content {
+            padding: 0 0 30px;
+        }
+    }
         
+    .footer-list {
+        justify-content: center;
+        margin-top: 94px;
+    } 
+    .footer__desc {
+        text-align: center;
+    }
+    .social__row {
+        justify-content: center;
+    }
+    .title-line {
+        justify-content: center;
+        gap: 30px;
+    }
+    .title-block__btn-line {
+        justify-content: center;
+    }
 }

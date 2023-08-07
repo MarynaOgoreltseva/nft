@@ -208,9 +208,10 @@ section {
 .hero__circle {
   position: absolute;
   top: 30%;
-  width: 172px;
-  height: 172px;
-  left: 0;
+  left: -38px;
+}
+.hero__svg {
+  width: 82%;
 }
 .hero__circle-text {
   fill: white;
@@ -220,8 +221,8 @@ section {
 }
 .hero__circle-icon {
   position: absolute;
-  top: 40%;
-  left: 40%;
+  top: 42%;
+  left: 35%;
 }
 
 .stats {
@@ -599,6 +600,19 @@ section {
     margin: 30px 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .grid {
+    grid-template-areas: "grid__cell_1 grid__cell_2" "grid__cell_4 grid__cell_5" "grid__cell_3 grid__cell_3";
+  }
+  .grid__cell {
+    width: unset;
+    max-width: unset;
+    margin: 0;
+  }
+  .grid__cell_3 {
+    height: 311px;
+  }
+}
 @media screen and (max-width: 480px) {
   section,
   .hero,
@@ -650,6 +664,7 @@ section {
   }
   .footer__desc {
     text-align: center;
+    margin: auto;
   }
   .social__row {
     justify-content: center;
@@ -666,7 +681,7 @@ section {
     top: 0;
     left: 0;
     height: 376px;
-    transform: scale(0.9);
+    transform: scale(0.8);
   }
   .subscribe__pic2 {
     transform: scale(0.7);
@@ -675,5 +690,9 @@ section {
     top: 0;
     right: 0;
     height: 475px;
+  }
+  .grid {
+    display: flex;
+    flex-direction: column;
   }
 }/*# sourceMappingURL=styles.css.map */

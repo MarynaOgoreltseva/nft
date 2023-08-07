@@ -67,6 +67,7 @@ ul {
   border: 1px solid #D6EF0E;
   background: transparent;
   color: #D6EF0E;
+  padding: 16px 40px;
 }
 .btn_header {
   height: 48px;
@@ -92,6 +93,7 @@ ul {
 }
 .title_big {
   font-size: 64px;
+  line-height: 120%;
 }
 .title_medium {
   font-size: 48px;
@@ -169,6 +171,7 @@ section {
 .hero {
   font-size: 16px;
   font-family: Inter;
+  padding-top: 79px;
 }
 .hero .wrap {
   display: flex;
@@ -195,17 +198,19 @@ section {
   max-width: 575px;
   width: 100%;
   position: relative;
+  padding: 0 51px 93px 60px;
 }
 .hero__foto {
-  width: 464px;
+  max-width: 464px;
+  width: 100%;
   height: 544px;
-  margin: 0 51px 0 60px;
 }
 .hero__circle {
   position: absolute;
   top: 30%;
   width: 172px;
   height: 172px;
+  left: 0;
 }
 .hero__circle-text {
   fill: white;
@@ -257,8 +262,17 @@ section {
   display: flex;
   justify-content: space-between;
 }
+.bid__content.btn {
+  padding: 16px 40px;
+}
 .bid__item-text {
   color: #D6EF0E;
+  margin-bottom: 8px;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
 }
 .bid__item-number {
   color: #FFFFFD;
@@ -267,6 +281,7 @@ section {
 .amazing .title {
   max-width: 506px;
   width: 100%;
+  line-height: 133%;
 }
 .amazing__cards {
   display: flex;
@@ -448,7 +463,7 @@ section {
   left: 20px;
   width: 410px;
   height: 376px;
-  transform: rotate(-11.188deg);
+  transform: scale(1.1);
 }
 .subscribe__pic2 {
   position: absolute;
@@ -496,6 +511,7 @@ section {
 .footer__desc {
   max-width: 272px;
   width: 100%;
+  margin: auto;
 }
 .footer__text {
   margin-bottom: 24px;
@@ -506,9 +522,12 @@ section {
   line-height: 160%;
 }
 
-.social {
+.social__row {
   display: flex;
   gap: 12px;
+}
+.social__row .icon {
+  font-size: 24px;
 }
 
 .footer-list {
@@ -525,8 +544,8 @@ section {
   font-weight: 700;
   line-height: 120%;
 }
-.footer-list__items {
-  gap: 8px;
+.footer-list__item + .footer-list__item {
+  margin-top: 8px;
 }
 .footer-list__item-link {
   color: #FFFFFD;
@@ -541,7 +560,7 @@ section {
 }
 
 .copyright {
-  margin-top: 48px;
+  margin: 48px 0 0 19px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -565,6 +584,21 @@ section {
   line-height: 160%;
 }
 
+@media screen and (max-width: 1024px) {
+  section, .hero, .footer {
+    padding: 52px 0;
+  }
+  .flex.wrap {
+    justify-content: center;
+  }
+  .amazing__cards {
+    justify-content: center;
+    gap: 30px;
+  }
+  .title-block {
+    margin: 30px 0;
+  }
+}
 @media screen and (max-width: 480px) {
   .nav__list {
     display: none;

@@ -660,7 +660,8 @@ section {
   }
   .footer-list {
     justify-content: center;
-    margin-top: 94px;
+    margin-top: 85px;
+    gap: 85px;
   }
   .footer__desc {
     text-align: center;

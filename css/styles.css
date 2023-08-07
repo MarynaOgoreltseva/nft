@@ -679,17 +679,20 @@ section {
   .subscribe__pic1 {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -41px;
     height: 376px;
-    transform: scale(0.8);
+    transform: scale(0.6);
   }
   .subscribe__pic2 {
     transform: scale(0.7);
   }
   .create__pic1 {
-    top: 0;
-    right: 0;
-    height: 475px;
+    left: -55px;
+    transform: scale(0.7);
+  }
+  .create__pic2 {
+    transform: scale(0.6);
+    left: -50px;
   }
   .grid {
     display: flex;

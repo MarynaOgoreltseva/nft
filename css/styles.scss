@@ -378,7 +378,7 @@ section {
         bottom: 0;
         left: 0;
         z-index: 2;
-        // width: 410px;
+        width: 410px;
         height: 400px;
     }
 }
@@ -483,7 +483,7 @@ section {
         position: absolute;        
         top: 20px;
         left: 20px;
-        // width: 410px;
+        width: 410px;
         height: 376px;
         // transform: rotate(-11.188deg);
         transform: scale(1.1);
@@ -533,7 +533,7 @@ section {
     &__desc {
         max-width: 272px;
         width: 100%;
-        margin: auto;
+        margin: auto 0;
     }
     &__text {
         margin-bottom: 24px;

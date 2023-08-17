@@ -57,7 +57,7 @@ ul {
   padding: 12px 40px;
   border-radius: 8px;
   background: #D6EF0E;
-  color: #FFF;
+  color: #fff;
   font-size: 16px;
   font-family: Inter;
   font-weight: 700;
@@ -203,7 +203,6 @@ section {
 .hero__foto {
   max-width: 464px;
   width: 100%;
-  height: 544px;
 }
 .hero__circle {
   position: absolute;
@@ -214,7 +213,7 @@ section {
   width: 82%;
 }
 .hero__circle-text {
-  fill: white;
+  fill: #fff;
   font-weight: 700;
   font-family: "Source Sans Pro";
   font-size: 16px;
@@ -612,6 +611,17 @@ section {
   .grid__cell_3 {
     height: 311px;
   }
+  .footer__desc {
+    text-align: center;
+    margin: auto;
+  }
+  .social__row {
+    display: flex;
+    gap: 12px;
+    margin: auto;
+    justify-content: center;
+    margin-bottom: 85px;
+  }
 }
 @media screen and (max-width: 480px) {
   section,
@@ -663,10 +673,6 @@ section {
     margin-top: 85px;
     gap: 85px;
   }
-  .footer__desc {
-    text-align: center;
-    margin: auto;
-  }
   .social__row {
     justify-content: center;
   }
@@ -688,7 +694,6 @@ section {
     transform: scale(0.7);
   }
   .create__pic1 {
-    left: -55px;
     transform: scale(0.7);
   }
   .create__pic2 {
@@ -698,5 +703,15 @@ section {
   .grid {
     display: flex;
     flex-direction: column;
+  }
+  .email-form {
+    flex-direction: column;
+    align-items: center;
+  }
+  .email-form_input {
+    text-align: center;
+  }
+  .email-form .btn {
+    width: 100%;
   }
 }/*# sourceMappingURL=styles.css.map */

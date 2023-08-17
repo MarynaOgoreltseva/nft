@@ -38,9 +38,6 @@ body {
     background-size: cover;
     background-color: rgba(9, 15, 29, 1);
     background-blend-mode: multiply;
-    // background: url(../img/BgIMage.png)
-    //     lightgray 0px -0.827px / 179.034% 100.035% no-repeat;
-    // background-blend-mode: difference;
 }
 
 a {
@@ -52,7 +49,7 @@ ul {
     list-style-type: none;
 }
 .coloring {
-    color: $main-yellow
+    color: $main-yellow;
 }
 
 .btn {
@@ -62,7 +59,7 @@ ul {
     padding: 12px 40px;
     border-radius: 8px;
     background: $main-yellow;
-    color: #FFF;
+    color: $main-white;
     font-size: 16px;
     font-family: Inter;
     font-weight: 700;
@@ -91,7 +88,7 @@ ul {
 }
 
 .title {
-    color: #FFFFFD;
+    color: $white-stich;
     font-family: Canela;
     font-weight: 500;
     line-height: 120%;
@@ -209,20 +206,18 @@ section {
     &__foto {
         max-width: 464px;
         width: 100%;
-        height: 544px;
+        // height: 544px;
     }
     &__circle {
         position: absolute;
         top: 30%;
-        // width: 172px;
-        // height: 172px;
         left: -38px;
     }
     &__svg {
         width: 82%;
     }
     &__circle-text {
-        fill: white;
+        fill: $main-white;
         font-weight: 700;
         font-family: "Source Sans Pro";
         font-size: 16px;
@@ -649,6 +644,18 @@ section {
             height: 311px;
         }
     }
+    
+    .footer__desc {
+        text-align: center;
+        margin: auto;
+    }
+    .social__row {
+        display: flex;
+        gap: 12px;
+        margin: auto;
+        justify-content: center;
+        margin-bottom: 85px;
+    }
 }
 
 @media screen and (max-width:480px) {
@@ -703,11 +710,9 @@ section {
         justify-content: center;
         margin-top: 85px;
         gap: 85px;
+
+
     } 
-    .footer__desc {
-        text-align: center;
-        margin: auto;
-    }
     .social__row {
         justify-content: center;
     }
@@ -732,7 +737,7 @@ section {
         }
     }
     .create__pic1 {
-        left: -55px;
+        // left: -55px;
         transform: scale(0.7);
     }
     .create__pic2{
@@ -742,6 +747,16 @@ section {
     .grid {
         display: flex;
         flex-direction: column;
+    }
+    .email-form {
+        flex-direction: column;
+        align-items: center;
+        &_input {
+            text-align: center;
+        }
+        & .btn {
+            width: 100%;
+        }
     }
 
 }

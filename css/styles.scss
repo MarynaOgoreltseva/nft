@@ -203,7 +203,7 @@ section {
         position: relative;
         padding: 0 51px 93px 60px;
     }
-    &__foto {
+    &__photo {
         max-width: 464px;
         width: 100%;
         // height: 544px;
@@ -292,8 +292,9 @@ section {
         }
     &__cards {
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
     }
 }
 
@@ -392,56 +393,40 @@ section {
 }
 .grid {
     display: grid;
-    gap: 30px;
-    // grid-template-columns: repeat(410px, 1fr);
-    grid-auto-flow: dense; 
-    grid-template-areas: 
-    "grid__cell_1 grid__cell_2 grid__cell_3"
-    "grid__cell_4 grid__cell_5 grid__cell_3";
+    gap: 1.5%;
+    grid-template-areas:
+            "a b c d"
+            "e f g h";
+    grid-template-columns: 23.2% 8.5% 31.8% 31.8%;
+    grid-template-rows: 311px 311px;
     &__cell {
         display: flex;
         align-items: end;
         padding: 0 0 24px 24px;
         border-radius: 16px;
-        background: linear-gradient(2deg, rgba(19, 30, 58, 0.92) 0%, rgba(19, 30, 58, 0.00) 94.62%),  lightgray -22.387px -35px / 110.921% 105.368% no-repeat;
-        background-blend-mode: darken;
-        background-repeat: no-repeat;
         background-size: cover;
-        height: 311px;
-        // max-width: 410px;
-        object-fit: cover;
-        // width: 100%;
         &_1 {
             background-image: url(../img/grid2.png);
-            grid-area: grid__cell_1;
-            max-width: 300px;
-            width: 100%;
         }
         &_2 {
             background-image: url(../img/grid3.png);
-            grid-area: grid__cell_2;
-            // max-width: 520px;
-            // width: 520px;
-            margin-left: calc(100vw / 39 * -1);
+            grid-column: span 2;
         }
         &_3 {
             background-image: url(../img/grid1.png);
-            grid-area: grid__cell_3;
-            height: 652px;
-            // width: 410px;
+            grid-row: span 2;
         }
         &_4 {
             background-image: url(../img/grid4.png);
-            grid-area: grid__cell_4;
-            // width: 410px;
+            grid-column: span 2;
         }
         &_5 {
             background-image: url(../img/grid5.png);
-            grid-area: grid__cell_5;
-            // width: 410px;
         }
     }
 }
+
+
 
 .user {
     display: flex;
@@ -474,7 +459,8 @@ section {
     }
     &__pictures {
         position: relative;
-        width: 630px;
+        width: 100%;
+        max-width: 630px;
         height: 458px;
     }
     &__pic1 {
@@ -608,42 +594,45 @@ section {
         line-height: 160%;
     }
 }
-
-@media screen and (max-width:1024px) {
-    section, .hero, .footer {
-        padding: 52px 0;
-    }
+@media screen and (max-width:1280px) {
     .flex {
         &.wrap {
             justify-content: center;
         }
     }
-    .amazing__cards {
+    .subscribe .wrap {
+        flex-direction: column-reverse;
         justify-content: center;
-        gap: 30px;
+        gap: 50px;
     }
-    .title-block {
-        margin: 30px 0;
-    }
-
+        section,
+        .hero,
+        .footer {
+            padding: 40px 0;
+        }
     
+    
+        .title-block {
+            margin: 30px 0;
+        }
 }
 
+
 @media screen and (max-width:768px) {
-    .grid {
-        grid-template-areas:
-            "grid__cell_1 grid__cell_2"
-            "grid__cell_4 grid__cell_5"
-            "grid__cell_3 grid__cell_3";
-        &__cell {
-            width: unset;
-            max-width: unset;
-            margin: 0;
-        }
-        &__cell_3 {
-            height: 311px;
-        }
-    }
+    // .grid {
+    //     grid-template-areas:
+    //         "grid__cell_1 grid__cell_2"
+    //         "grid__cell_4 grid__cell_5"
+    //         "grid__cell_3 grid__cell_3";
+    //     &__cell {
+    //         width: unset;
+    //         max-width: unset;
+    //         margin: 0;
+    //     }
+    //     &__cell_3 {
+    //         height: 311px;
+    //     }
+    // }
     
     .footer__desc {
         text-align: center;
@@ -704,6 +693,9 @@ section {
         &__content {
             padding: 0 0 30px;
         }
+        &__svg {
+            display: none;
+        }
     }
         
     .footer-list {
@@ -747,6 +739,10 @@ section {
     .grid {
         display: flex;
         flex-direction: column;
+        gap: 30px;
+        &__cell {
+            height: 300px;
+        }
     }
     .email-form {
         flex-direction: column;

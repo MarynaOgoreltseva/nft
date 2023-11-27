@@ -410,6 +410,7 @@ section {
   grid-column: span 2;
   width: 94.23%;
 }
+
 .user {
   position: absolute;
   content: "";
@@ -724,7 +725,7 @@ section {
     width: unset;
   }
   section.subscribe {
-    padding: 120px 0;
+    padding: 120px 0 70px;
   }
   .user {
     align-items: end;

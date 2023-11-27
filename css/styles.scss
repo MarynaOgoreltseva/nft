@@ -775,10 +775,10 @@ section {
             grid-template-areas: unset;
             grid-auto-columns: unset;
             grid-auto-rows: unset;
-            &_img{
-                max-width: 100%;
-                width: unset;
-            }
+            // &_img{
+            //     max-width: 100%;
+            //     width: unset;
+            // }
             &__cell {
                 justify-content: center;
                 &_2 {
@@ -802,10 +802,10 @@ section {
         padding: 120px 0 70px;
     }
     .user {
-        align-items: end;
-        justify-content: center;
-        right: 0;
-        top: 0;
+        // align-items: end;
+        // justify-content: center;
+        // right: 0;
+        // top: 0;
         &__info {
             text-align: justify;
         }

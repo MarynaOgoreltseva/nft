@@ -704,10 +704,6 @@ section {
     grid-auto-columns: unset;
     grid-auto-rows: unset;
   }
-  .grid_img {
-    max-width: 100%;
-    width: unset;
-  }
   .grid__cell {
     justify-content: center;
   }
@@ -726,12 +722,6 @@ section {
   }
   section.subscribe {
     padding: 120px 0 70px;
-  }
-  .user {
-    align-items: end;
-    justify-content: center;
-    right: 0;
-    top: 0;
   }
   .user__info {
     text-align: justify;

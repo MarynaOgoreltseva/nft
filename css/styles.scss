@@ -276,7 +276,7 @@ section {
     right: 0;
     &__bg {
         position: absolute;
-        width: 352px;
+        max-width: 352px;
         height: 221px;
         background-color: rgba(26, 38, 82, 1);
         filter: blur(125px);

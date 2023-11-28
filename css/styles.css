@@ -272,7 +272,7 @@ section {
 }
 .bid__bg {
   position: absolute;
-  width: 352px;
+  max-width: 352px;
   height: 221px;
   background-color: rgb(26, 38, 82);
   filter: blur(125px);

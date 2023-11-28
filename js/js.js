@@ -33,3 +33,9 @@ oGallery.addEventListener('click', function(ev) {
   oBig.style.transform = `translate(-50%, -50%) rotate(1turn)`;
   oGallery.classList.toggle('show', true);
 });
+
+$(window).resize(function() {
+            if ($(window).width() < 481) {
+                $('.grid').removeClass('gallery');
+            } 
+        }).resize();

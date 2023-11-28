@@ -134,6 +134,7 @@ section {
         &:hover,
          :active {
             color: $main-white;
+            text-decoration: underline 1px $main-yellow;
          }
     }
 }
@@ -176,7 +177,6 @@ section {
     font-size: 16px;
     font-family: Inter;
     padding-top: 79px;
-    position: relative;
     & .wrap {
         display: flex;
         justify-content: space-between;
@@ -187,9 +187,10 @@ section {
         height: 458px;
         background-color: rgba(31, 65, 61, 1);
         position: absolute;
-        left: 439px;
-        top: 249px;
+        left: -55%;
+        top: 20%;
         filter: blur(200px);
+        z-index: -1;
     }
     &__content {
         display: flex;
@@ -519,6 +520,7 @@ section {
         height: 358px;
         background-color: rgba(31, 65, 61, 1);
         filter: blur(175px);
+        z-index: -1;
     }
     &__bg-img {
         width: 100%;
@@ -615,6 +617,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: 94px;
+    justify-content: center;
     &__items-title {
         margin-bottom: 24px;
         color: $main-white;
@@ -687,12 +690,26 @@ section {
             margin: 30px 0;
         }
 }
-
+@media screen and (max-width:1024px) {
+    .footer {
+        &__block {
+            gap: 50px;
+            justify-content: center;
+        }
+    }
+}
 
 @media screen and (max-width:768px) {
     .footer__desc {
         text-align: center;
         margin: auto;
+    }
+    .footer-list {
+    text-align: center;
+    gap: 50px;
+        &__column {
+            flex: 1 1 170px;
+        }
     }
     .social__row {
         display: flex;
@@ -701,22 +718,11 @@ section {
         justify-content: center;
         margin-bottom: 85px;
     }
-}
-
-@media screen and (max-width:480px) {
-    section,
-    .hero,
-    .footer {
-        padding: 30px 0;
-    }
-    section {
-        text-align: center;
-    }
     .nav__list {
-        display: none;
+                    display: none;
     }
     .nav-mobile {
-        display:block;
+        display: block;
         &__list {
             display: none;
             &.is-active {
@@ -739,13 +745,37 @@ section {
                 }
             }
         }
-    }
-    .hero {
-        &__stats {
-            gap: 40px;
-            justify-content: center;
-            padding-top: 30px;
+        &__icon {
+            width: 143px;
+            height: 48px;
         }
+    }
+
+        .hero {
+            &__stats {
+                gap: 40px;
+                justify-content: center;
+                padding-top: 30px;
+            }
+        }
+}
+
+@media screen and (max-width:480px) {
+    section,
+    .hero,
+    .footer {
+        padding: 30px 0;
+    }
+    section {
+        text-align: center;
+    }
+
+    .hero {
+        // &__stats {
+        //     gap: 40px;
+        //     justify-content: center;
+        //     padding-top: 30px;
+        // }
         &__content {
             padding: 0 0 30px;
         }
@@ -841,6 +871,15 @@ section {
         &__info {
             text-align: justify;
         }
+    }
+    .btn {
+        &_header {
+            padding: 10px 20px;
+        }
+    }
+    .nav-mobile__icon {
+        padding: 10px 20px;
+        width: 103px;
     }
 
 }

@@ -4,9 +4,16 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function () {
+    $('.grid__img').click(function() {
+        $('.overlay').toggleClass('is-gallery');
+    });
+});
+
 const oGallery = document.querySelector('.gallery');
 oGallery.addEventListener('click', function(ev) {
   if (ev.target.tagName != 'IMG') { return false; };
+  if (ev.target.className === 'user__photo') { return false; };
   let oTarget = ev.target, nWidth, nHeight, nRatio = oTarget.offsetWidth / oTarget.offsetHeight;
   let oBig = this.appendChild(document.createElement('DIV'));
   oBig.style.position = `absolute`;
@@ -25,6 +32,7 @@ oGallery.addEventListener('click', function(ev) {
     this.addEventListener('transitionend', function() { this.remove(); });
     this.style.transition = `.5s ease-in`;
     this.style.height = this.style.width = `0px`;
+    $('.overlay').toggleClass('is-gallery');
   oGallery.classList.toggle('show', false);
   });
   oBig.classList.toggle('active');
@@ -37,5 +45,5 @@ oGallery.addEventListener('click', function(ev) {
 $(window).resize(function() {
             if ($(window).width() < 481) {
                 $('.grid').removeClass('gallery');
-            } 
+            }
         }).resize();

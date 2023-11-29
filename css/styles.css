@@ -793,18 +793,25 @@ section {
   position: relative;
 }
 
-.gallery .grid__img {
-  height: auto;
-  width: 200px;
-  margin: 10px;
-  box-shadow: 0 0 0 5px #fff, 0 0 0 6px #919191;
-  transition: 0.5s linear;
+.overlay {
+  display: none;
+  opacity: 0.9;
   cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
 }
 
-.show .grid__img {
-  opacity: 0.25;
-  pointer-events: none;
+body {
+  position: relative;
+}
+
+.overlay.is-gallery {
+  display: block;
+  z-index: 4;
 }
 
 .active {

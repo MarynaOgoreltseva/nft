@@ -25,7 +25,7 @@ oGallery.addEventListener('click', function(ev) {
     nWidth = this.offsetWidth; nHeight = nWidth / nRatio;
   };
   oBig.style.background = `center / 100% 100% no-repeat url('${oTarget.currentSrc}')`;
-  oBig.insertAdjacentHTML('beforeend', '<div class="close">×</div>');
+  oBig.insertAdjacentHTML('beforeend', '<div class="close"></div>');
   oBig.addEventListener('transitionend', function() { this.querySelector('.close').style.opacity = 1; });
   oBig.addEventListener('click', function(ev) {
     ev.stopPropagation();
@@ -37,13 +37,15 @@ oGallery.addEventListener('click', function(ev) {
   });
   oBig.classList.toggle('active');
   oBig.style.width = `${nWidth / 1.3}px`; oBig.style.height = `${nHeight / 1.3}px`;
-  oBig.style.top = oBig.style.left = `50%`;
+  oBig.style.top = `40%`;
+    oBig.style.left = `50%`;
+    oBig.style.position = `fixed`;
   oBig.style.transform = `translate(-50%, -50%) rotate(1turn)`;
   oGallery.classList.toggle('show', true);
 });
 
 $(window).resize(function() {
-            if ($(window).width() < 481) {
-                $('.grid').removeClass('gallery');
-            }
-        }).resize();
+    if ($(window).width() < 481) {
+        $('.grid').removeClass('gallery');
+    }
+}).resize();

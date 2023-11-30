@@ -23,6 +23,7 @@ button,
 input,
 textarea {
     border: 0;
+    outline: none;
 }
 
 img {
@@ -745,7 +746,8 @@ section {
                     width: 100%;
                     height: 100%;
                     &:hover {
-                        background-color: rgba(214, 239, 14, 0.3);
+                        border: 1px solid #fff;
+                        border-radius: 8px;
                     }
                 }
             }
@@ -753,6 +755,8 @@ section {
         &__icon {
             width: 143px;
             height: 48px;
+            background: none;
+            border: 1px solid #fff;
         }
     }
 
@@ -776,11 +780,6 @@ section {
     }
 
     .hero {
-        // &__stats {
-        //     gap: 40px;
-        //     justify-content: center;
-        //     padding-top: 30px;
-        // }
         &__content {
             padding: 0 0 30px;
         }
@@ -885,8 +884,11 @@ section {
     .nav-mobile__icon {
         padding: 10px 20px;
         width: 103px;
+        
     }
-
+    .email-form input {
+        width: 100%;
+    }
 }
 
 .gallery {

@@ -911,12 +911,13 @@ body {
 .active {
     transition: transform 1s ease-out, width 1s ease-in, height 1s ease-in;
     z-index: 5;
+    // pointer-events: none;
 }
 
 .close {
     position: fixed;
-    top: calc(100% - 50px);
-    right: calc(100% - 35px);
+    top: 50px;
+    right: 20px;
     // top: 0;
     // right: 0;
     height: 20px;
@@ -927,6 +928,7 @@ body {
     cursor: pointer;
     transition: 1s linear;
     opacity: 0;
+    z-index: 4;
 }
 
 .close::before,

@@ -672,7 +672,7 @@ section {
     background-color: #131E3A;
     position: fixed;
     z-index: 999;
-    width: 100vw;
+    width: 100%;
     top: 0;
     left: 0;
     height: 100vh;

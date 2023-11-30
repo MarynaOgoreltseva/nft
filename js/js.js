@@ -39,7 +39,7 @@ oGallery.addEventListener('click', function(ev) {
     })
   oBig.classList.toggle('active');
   oBig.style.width = `${nWidth / 1.3}px`; oBig.style.height = `${nHeight / 1.3}px`;
-  oBig.style.top = `40%`;
+  oBig.style.top = `50%`;
     oBig.style.left = `50%`;
     oBig.style.position = `fixed`;
   oBig.style.transform = `translate(-50%, -50%) rotate(1turn)`;

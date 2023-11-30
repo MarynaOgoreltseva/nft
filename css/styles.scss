@@ -507,6 +507,7 @@ section {
 
 .subscribe {
     position: relative;
+    
     & .wrap {
         display: flex;
         flex-wrap: wrap;
@@ -780,6 +781,7 @@ section {
     }
 
     .hero {
+        overflow: hidden;
         &__content {
             padding: 0 0 30px;
         }
@@ -807,6 +809,7 @@ section {
     }
 
     .subscribe {
+        overflow: hidden;
         &__pic1 {
             position: absolute;
             top: 0;
